@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+        <!-- Facebook POPUP LikeBox With Timer Code Start -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js"></script>
+        <style type='text/css'>
+            #exepopup{background-color:#fff;position: fixed;top:50%;z-index:9999;display:none;padding:0px;left:50%;border:10px solid rgba(82, 82, 82, 0.7);-webkit-background-clip: padding-box; /* for Safari */background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */-webkit-border-radius:8px 8px 8px 8px;-moz-border-radius:8px 8px 8px 8px;border-radius:8px 8px 8px 8px;width:400px;height:360px;margin-left:-200px;margin-top:0px;overflow:hidden;}#exepopup span{font-size:20px !important;font-weight:bold !important;}#exepopup h1{background:#6d84b4 url(http://4.bp.blogspot.com/-wbOyGFuANTQ/UVF1F4ouC4I/AAAAAAAABiA/RX4jNlICbjM/s1600/aktechz-fb-lock.png) 98% no-repeat;border:1px solid #3b5998 !important;color:#FFFFFF !important;font-size:20px !important;font-weight:700 !important;padding:5px !important;margin:0 !important;font-family:'"lucida grande",tahoma,verdana,arial,sans-serif !important;overflow:hidden !important;}.exepopupdata{font-size:12px !important;font-weight:normal !important;height:265px !important;padding:1px !important;background:#fff !important;border-bottom:2px solid #ddd;overflow:hidden !important;}#exepopupfooter{text-align:left;background:#F2F2F2 !important;height:56px !important;padding:10px 10px 10px 10px !important;overflow:hidden !important;}#exepopupclose{float:right;background-color:#eee !important;border:1px solid #ccc !important;color:#111 !important;font-weight:bold !important;padding:5px 8px 5px 8px !important;text-decoration:none !important;display:inline-block !important;font-family:'"lucida grande",tahoma,verdana,arial,sans-serif !important;outline:none !important;position:relative !important;font-size:18px !important;margin:1px !important;}#exepopupclose:active{top:1px;left:1px;}</style>
+        <script type='text/javascript'>
+            jQuery(document).ready(function() {
+                function exepopupfunc() {
+                    var sec = 10 //segundos de espera
+                    var timer = setInterval(function() {
+                        $("#exepopupfooter span").text(sec--);
+                        if (sec == 0) {
+                            $("#exepopup").fadeOut("slow");
+                            clearInterval(timer);
+                        }
+                    },1000);
+                    var exepopupwindow = jQuery(window).height();
+                    var exepopupdiv = jQuery("#exepopup").height();
+                    var exepopuptop = jQuery(window).scrollTop()+50;
+                    jQuery("#exepopup").css({"top":exepopuptop});
+                }
+                jQuery(window).fadeIn(exepopupfunc).resize(exepopupfunc);
+                //alert(jQuery.cookie('sreqshown'));
+                //var exepopupww = jQuery(window).width();
+                //var exepopupwww = jQuery("#exepopup").width();
+                //var exepopupleft = (exepopupww-exepopupwww)/2;
+                var exepopupleft = 500;
+                //var exepopupwindow = jQuery(window).height();
+                //var exepopupdiv = jQuery("#exepopup").height();
+                //var exepopuptop = (jQuery(window).scrollTop()+exepopupwindow-exepopupdiv) / 2;
+                jQuery("#exepopup").animate({opacity: "1", left: "0" , left: exepopupleft}, 0).show();
+                jQuery("#exepopupclose").click(function() {
+                    jQuery("#exepopup").animate({opacity: "0", left: "-5000000"}, 1000).show();
+                });
+            });
+        </script>
+        <div id="exepopup">
+            <h1>Join Us On Facebook</h1>
+            <div class="exepopupdata" >
+                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.grupojaque.com.php54-1.ord1-1.websitetestlink.com%2F#home-wrapper" style="border:none;width:450px;height:66px" frameborder="0" scrolling="no">
+                </iframe>
+            </div>
+            <!--div id="exepopupfooter">Please Wait <span>10</span> Seconds...!!!<a href="#" id="exepopupclose" onclick="return false;">Skip</a></div-->
+        </div>
+            <!-- Facebook POPUP LikeBox With Timer Code End -->
+
+    </body>
+</html>
