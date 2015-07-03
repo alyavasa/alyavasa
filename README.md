@@ -9,4 +9,4 @@
 <p><h1>Carpeta "instalaciones"</h1></p>
 <li><p><h4>Esta carpeta tiene contenido que facilita el instalar programas, paquetes u algún tipo de extensión</h4></p></li>
 <p><h1>Carpeta "scripts"</h1></p>
-<li><p><h4>Esta carpeta tiene contenido con ejemplos y se resuelven problemas con la finalidad de no rehacer código o fácilitar el problema con esa solución </h4></p></li>
+<li><p><h4>Esta carpeta tiene contenido con ejemplos y se resuelven problemas con la finalidad de no rehacer código o fácilitar el problema con esa solución. </h4></p></li>
